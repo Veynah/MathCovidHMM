@@ -1,1 +1,4 @@
 hmmlearn
+pandas
+matplotlib
+numpy
