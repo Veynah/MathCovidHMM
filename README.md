@@ -157,3 +157,22 @@ fenêtre de 7 jours, mais celle-ci laissait trop de bruits. <br>
 `hampel2.py` permet de comparer les différentes fenêtres, les graphiques sont disponibles ici: <br>
 <a href="https://github.com/Veynah/MathCovidHMM/tree/main/Projet/CodeVERSION1/GraphHampel2TestWindowSigma3" target="_blank">Graphiques de comparaison de fenêtres</a>
 
+<br>
+
+### La prochaine étape ### 
+est le lissage de la courbe. Pour adresser la présence de potentiels problèmes dans 
+notre dataset, comme des données manquantes, des délais dans les rapports et dépistages ou des erreurs
+d'encodage. Nous lissons les séquences avec un filtre de moyenne mobile (MA) à poids uniformes. <br>
+
+### Qu'est-ce que la Moyenne Mobile (MA) ? ###
+La moyenne mobile est une technique statistique utilisée pour analyser des séries de données en créant une série de moyennes de différents sous-ensembles du jeu de données original. C'est essentiellement une façon de lisser les données pour voir les tendances plus clairement, en réduisant l'impact du bruit ou des fluctuations à court terme.
+
+
+### Pourquoi combiner MA avec Hampel ?
+1. **Réduction du bruit** : La moyenne mobile lisse les séries de données en moyennisant les valeurs, ce qui aide à réduire le bruit et à clarifier les tendances sous-jacentes. Cependant, si des valeurs aberrantes extrêmes sont présentes, elles peuvent toujours influencer la moyenne, en particulier dans le cas de la SMA.
+
+2. **Gestion des valeurs aberrantes** : L'algorithme de Hampel est très efficace pour identifier et remplacer les valeurs aberrantes qui pourraient fausser les résultats de la moyenne mobile. En utilisant Hampel avant d'appliquer la moyenne mobile, on peut s'assurer que les moyennes calculées sont basées sur des données plus fiables et représentatives.
+
+3. **Amélioration de la précision des prévisions** : Dans les applications où les prévisions précises sont critiques, comme la finance ou la météorologie, l'ajout de l'étape de filtration Hampel avant le calcul des moyennes mobiles peut améliorer significativement la qualité des prédictions en éliminant les anomalies avant qu'elles n'affectent la moyenne.
+
+Prochaine étape montrer Hampel et MA avec une fenêtre de 21 jours, montrer les graphiques, montrer le script qui transoforme ces données en csv utilisable puis entrainer les modèles.
