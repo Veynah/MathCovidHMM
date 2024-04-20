@@ -32,7 +32,7 @@ df = df[["DATE", "TX_DESCR_FR", "CASES_PER_10K"]]
 
 # Liste des tailles de fenêtres à tester
 window_sizes = [7, 14, 21, 28]  # Une semaine à un mois
-n_sigmas = 4
+n_sigmas = 3
 
 # Tester différentes tailles de fenêtre
 for window_size in window_sizes:
