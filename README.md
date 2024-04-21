@@ -226,3 +226,60 @@ Donc avec une fenêtre coulissante de 7 pour Hampel et une moyenne mobile de 21 
 Nous avons fait en sorte de n'avoir que 2 chiffres après la virgule pour encore nous débarrasser du bruit et éviter les variations inutiles.
 
 <h4>Fin des traitements de données.</h4> 
+
+<h3>Entrainement de nos modèles HMM</h3>
+
+Nous avons utilisé la librairie hmmlearn qui implémente les hmm's. Comme dit, HMM est un modèle génératif probabiliste où les séquences d'états observables
+X sont générées par une séquence d'états internes cachés Z. Les états cachés ne sont pas directement observé. Les transitions entre les états cachés sont présumées
+avoir la forme de chaine de Markov.
+
+Nous utilisons les données stockées dans notre fichier csv (CASES_PER_10K_MA) que nous filtrons par commune pour avoir des modèles prédictionnels par communes.
+Nous avons des modèles entraînés sur 70% des données et prédisant les 30% restant. Ceux-ci sont les HMMTEST, en voici quelqu'uns : <br>
+
+<h4>Anderlercht</h4>
+<img src="./Projet/CodeVERSION2/30%/Anderlecht.png" width="40%">
+<img src="./Projet/CodeVERSION2/30%/COVID19_Anderlecht.png" width="40%">
+
+
+Matrice de transition entre les états :
+
+
+[[9.35235392e-001 0.00000000e+000 6.17084787e-172 4.27034347e-295 3.23912640e-002 0.00000000e+000 3.23733442e-002] <br>
+[0.00000000e+000 3.10940054e-001 0.00000000e+000 0.00000000e+000 3.44530003e-001 3.44529944e-001 0.00000000e+000] <br>
+[2.87464725e-199 0.00000000e+000 9.05818880e-001 3.14952874e-002 0.00000000e+000 0.00000000e+000 6.26858329e-002] <br>
+[4.32399624e-307 0.00000000e+000 2.34808164e-002 9.76519184e-001 0.00000000e+000 0.00000000e+000 2.00618713e-097] <br>
+[3.42462955e-002 3.41100424e-002 0.00000000e+000 0.00000000e+000 9.31643662e-001 1.73569596e-069 1.15613464e-188] <br>
+[0.00000000e+000 5.86074151e-002 0.00000000e+000 0.00000000e+000 1.61607110e-058 9.41392585e-001 0.00000000e+000] <br>
+[1.23401619e-002 0.00000000e+000 1.23049800e-002 1.56708933e-096 4.02641437e-195 0.00000000e+000 9.75354858e-001]] <br>
+
+Moyennes des états : <br>
+[[ 2.71290642] <br>
+[12.42034892] <br>
+[ 0.42710635] <br>
+[ 0.13849262] <br>
+[ 7.2303799 ] <br>
+[15.10802591] <br>
+[ 1.25572061]] <br>
+
+<h4>Bruxelles</h4>
+<img src="./Projet/CodeVERSION2/30%/Bruxelles.png" width="40%">
+<img src="./Projet/CodeVERSION2/30%/COVID19_Bruxelles.png" width="40%">
+
+
+Matrice de transition entre les états : <br>
+[[1.25672574e-003 9.98743266e-001 0.00000000e+000 0.00000000e+000 8.27251294e-009 1.67992905e-024 0.00000000e+000] <br>
+[1.89866716e-011 2.19760506e-008 0.00000000e+000 0.00000000e+000 9.35315617e-001 6.46843606e-002 0.00000000e+000] <br>
+[0.00000000e+000 0.00000000e+000 9.56175184e-001 2.19072245e-002 0.00000000e+000 6.49265834e-198 2.19175918e-002] <br>
+[0.00000000e+000 0.00000000e+000 3.03076442e-002 9.69692356e-001 0.00000000e+000 1.17511144e-072 7.94900410e-199] <br>
+[9.96168522e-001 6.70508067e-013 0.00000000e+000 0.00000000e+000 3.83147792e-003 3.39597001e-022 0.00000000e+000] <br>
+[3.97959626e-010 1.35850741e-002 3.18158218e-143 1.35563081e-002 1.53724953e-023 9.72858617e-001 0.00000000e+000] <br>
+[0.00000000e+000 0.00000000e+000 2.67253521e-002 3.55140598e-199 0.00000000e+000 0.00000000e+000 9.73274648e-001]] <br>
+
+Moyennes des états : <br>
+[[ 0.13385575] <br>
+[ 0.13906177] <br>
+[ 3.14798448] <br>
+[ 1.39340444] <br>
+[ 0.1336158 ] <br>
+[ 0.69809818] <br>
+[11.82342908]] <br>

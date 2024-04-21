@@ -31,8 +31,8 @@ df["DATE"] = pd.to_datetime(df["DATE"])
 df = df[["DATE", "TX_DESCR_FR", "CASES_PER_10K"]]
 
 # Filtrer les données pour la période spécifiée
-start_date = pd.Timestamp("2021-01-01")
-end_date = pd.Timestamp("2021-03-01")
+start_date = pd.Timestamp("2020-12-01")
+end_date = pd.Timestamp("2021-04-04")
 df = df[(df["DATE"] >= start_date) & (df["DATE"] <= end_date)]
 
 # Appliquer le filtre Hampel à chaque commune séparément
