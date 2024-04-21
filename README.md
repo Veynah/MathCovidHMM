@@ -237,8 +237,8 @@ Nous utilisons les données stockées dans notre fichier csv (CASES_PER_10K_MA) 
 Nous avons des modèles entraînés sur 70% des données et prédisant les 30% restant. Ceux-ci sont les HMMTEST, en voici quelqu'uns : <br>
 
 <h4>Anderlercht</h4>
-<img src="./Projet/CodeVERSION2/30%/Anderlecht.png" width="40%">
-<img src="./Projet/CodeVERSION2/30%/COVID19_Anderlecht.png" width="40%">
+<img src="./Projet/CodeVERSION2/30/Anderlecht.png" width="40%">
+<img src="./Projet/CodeVERSION2/30/COVID19_Anderlecht.png" width="40%">
 
 
 Matrice de transition entre les états :
@@ -261,9 +261,11 @@ Moyennes des états : <br>
 [15.10802591] <br>
 [ 1.25572061]] <br>
 
+
+
 <h4>Bruxelles</h4>
-<img src="./Projet/CodeVERSION2/30%/Bruxelles.png" width="40%">
-<img src="./Projet/CodeVERSION2/30%/COVID19_Bruxelles.png" width="40%">
+<img src="./Projet/CodeVERSION2/30/Bruxelles.png" width="40%">
+<img src="./Projet/CodeVERSION2/30/COVID19_Bruxelles.png" width="40%">
 
 
 Matrice de transition entre les états : <br>
@@ -283,3 +285,53 @@ Moyennes des états : <br>
 [ 0.1336158 ] <br>
 [ 0.69809818] <br>
 [11.82342908]] <br>
+
+
+
+<h4>Etterbeek</h4>
+<img src="./Projet/CodeVERSION2/30/Etterbeek.png" width="40%">
+<img src="./Projet/CodeVERSION2/30/COVID19_Etterbeek.png" width="40%">
+
+
+Matrice de transition entre les états : <br>
+[[9.56560119e-001 0.00000000e+000 0.00000000e+000 1.82623433e-169 0.00000000e+000 4.34398811e-002 4.08906078e-102] <br>
+[0.00000000e+000 0.00000000e+000 7.50637770e-146 8.89318163e-323 1.00000000e+000 0.00000000e+000 0.00000000e+000] <br>
+[0.00000000e+000 6.20257935e-002 8.75811581e-001 6.21626252e-002 2.87777734e-111 1.62247417e-124 0.00000000e+000] <br>
+[3.49777571e-171 1.06535199e-184 6.93794578e-002 8.61083825e-001 1.19616276e-253 6.95367168e-002 0.00000000e+000] <br>
+[0.00000000e+000 3.91453186e-157 5.48214594e-002 1.58370006e-166 9.45178541e-001 0.00000000e+000 0.00000000e+000] <br>
+[4.69987549e-002 0.00000000e+000 1.41573853e-130 4.70666846e-002 0.00000000e+000 9.05934561e-001 2.89444015e-275] <br>
+[5.41399851e-003 0.00000000e+000 0.00000000e+000 0.00000000e+000 0.00000000e+000 2.17635433e-179 9.94586001e-001]] <br>
+
+Moyennes des états : <br>
+[[ 1.18639812] <br>
+[10.40999815] <br>
+[ 7.37356165] <br>
+[ 3.73028944] <br>
+[12.56237903] <br>
+[ 2.01370916] <br>
+[ 0.31965054]] <br>
+
+
+
+<h4>Schaerbeek</h4>
+<img src="./Projet/CodeVERSION2/30/Schaerbeek.png" width="40%">
+<img src="./Projet/CodeVERSION2/30/COVID19_Schaerbeek.png" width="40%">
+
+
+Matrice de transition entre les états : <br>
+[[9.68670073e-001 2.63399242e-227 8.56665027e-159 0.00000000e+000 6.83634581e-041 2.68227125e-249 3.13299268e-002] <br>
+[0.00000000e+000 3.41059358e-007 0.00000000e+000 0.00000000e+000 1.89545819e-002 9.81045077e-001 0.00000000e+000] <br>
+[1.68685201e-174 0.00000000e+000 8.82952150e-001 5.84641480e-002 0.00000000e+000 0.00000000e+000 5.85837017e-002] <br>
+[0.00000000e+000 0.00000000e+000 5.24094791e-002 9.47590521e-001 0.00000000e+000 0.00000000e+000 9.50952803e-130] <br>
+[3.01294792e-002 1.18968686e-149 0.00000000e+000 0.00000000e+000 9.69870521e-001 2.86556859e-164 5.23248861e-102] <br>
+[0.00000000e+000 4.98403881e-001 0.00000000e+000 0.00000000e+000 1.86048355e-011 5.01596119e-001 0.00000000e+000] <br>
+[4.79486026e-002 0.00000000e+000 4.79099651e-002 4.07578878e-133 4.02695830e-149 0.00000000e+000 9.04141432e-001]] <br>
+
+Moyennes des états : <br>
+[[ 2.28714681] <br>
+[ 0.33100403] <br>
+[ 8.99931144] <br>
+[14.35436265] <br>
+[ 1.30987269] <br>
+[ 0.31615846] <br>
+[ 4.62860202]] <br>
