@@ -193,29 +193,29 @@ Nous pouvons comparer les résultats d'une fenêtre de 7 jours à ceux de 21 jou
 
 <br>
 
-Voici tous les graphiques : <br>
+Voici tous les graphiques :
 
-<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_Anderlecht.png" width="25%">
-<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Auderghem.png" width="25%">
-<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Berchem-Sainte-Agathe.png" width="25%">
-<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Bruxelles.png" width="25%">
+<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Anderlecht.png" width="25%">
+<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Auderghem.png" width="25%">
+<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Berchem-Sainte-Agathe.png" width="25%">
+<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Bruxelles.png" width="25%">
 <br>
-<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Etterbeek.png" width="25%">
-<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Evere.png" width="25%">
-<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Forest_(Bruxelles-Capitale).png" width="25%">
-<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Ganshoren.png" width="25%">
+<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Etterbeek.png" width="25%">
+<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Evere.png" width="25%">
+<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Forest_(Bruxelles-Capitale).png" width="25%">
+<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Ganshoren.png" width="25%">
 <br>
-<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Ixelles.png" width="25%">
-<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Jette.png" width="25%">
-<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Koekelberg.png" width="25%">
-<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Molenbeek-Saint-Jean.png" width="25%">
+<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Ixelles.png" width="25%">
+<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Jette.png" width="25%">
+<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Koekelberg.png" width="25%">
+<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Molenbeek-Saint-Jean.png" width="25%">
 <br>
-<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Saint-Gilles.png" width="25%">
-<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Saint-Josse-ten-Noode.png" width="25%">
-<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Schaerbeek.png" width="25%">
-<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Uccle.png" width="25%">
+<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Saint-Gilles.png" width="25%">
+<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Saint-Josse-ten-Noode.png" width="25%">
+<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Schaerbeek.png" width="25%">
+<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Uccle.png" width="25%">
 <br>
-<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Watermael-Boitsfort.png" width="25%">
-<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Woluwe-Saint-Lambert.png" width="25%">
-<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Woluwe-Saint-Pierre.png" width="25%">
+<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Watermael-Boitsfort.png" width="25%">
+<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Woluwe-Saint-Lambert.png" width="25%">
+<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Woluwe-Saint-Pierre.png" width="25%">
 
