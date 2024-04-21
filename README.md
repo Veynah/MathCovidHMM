@@ -410,3 +410,28 @@ Les moyennes des états indiquent la valeur moyenne observée lorsque le systèm
 
 - **Stabilité vs Changement**: Une matrice avec de fortes probabilités sur la diagonale et des valeurs basses hors diagonale suggère un modèle où les états sont assez stables jour après jour, avec occasionnellement des transitions significatives.
 - **Dynamique des Transitions**: Les transitions qui sont possibles mais peu probables (valeurs basses mais non nulles) indiquent que certains changements d'état, bien que rares, sont possibles.
+
+
+<h3>Conclusion</h3>
+
+Ce projet a fourni une analyse amateur de la propagation du Covid19 à Bruxelles à un niveau microscopique (par commune), en utilisant des techniques statistiques avancées
+pour décoder les tendances cachées derrière les données brutes. Les résultats, bien que pas tout le temps précis ou correctes, ont montré que certaines communes
+présentent des dynamiques de propagation distinctes et que les modèles HMM peuvent être des outils précieux pour prévoir les changements dans les tendances
+de la maladie, en supposant que les conditions restent constantes.
+
+Ces analyses et modélisations peuvent aider les professionnels à mieux comprendre et à réagir aux épidémies, en mettant en oeuvre des interventions ciblées
+basées sur les prévisions et modèles et analyse des états passés.
+
+<br>
+
+<h4>Travaux et articles sur lesquels nous avons basé notre projet:</h4> <br>
+https://hmmlearn.readthedocs.io/en/latest/auto_examples/plot_poisson_hmm.html#sphx-glr-auto-examples-plot-poisson-hmm-py <br>
+https://hmmlearn.readthedocs.io/en/latest/tutorial.html#training-hmm-parameters-and-inferring-the-hidden-states <br>
+https://medium.com/@natsunoyuki/hidden-markov-models-with-python-c026f778dfa7 <br>
+https://kth.diva-portal.org/smash/get/diva2:1428900/FULLTEXT01.pdf <br>
+https://www.mathworks.com/help/dsp/ref/hampelfilter.html <br>
+https://qiniu.pattern.swarma.org/pdf/arxiv/2008.07609.pdf <br>
+https://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=9543670 <br>
+https://www.sciencedirect.com/science/article/pii/S2352864822001067
+[14:55] <br>
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7461001/ <br>
