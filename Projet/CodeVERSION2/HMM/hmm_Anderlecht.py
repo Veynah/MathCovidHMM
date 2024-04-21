@@ -3,7 +3,7 @@ from hmmlearn import hmm
 import numpy as np
 
 # Charger les données
-df = pd.read_csv("Filtered_Covid19_data.csv")
+df = pd.read_csv("../Filtered_Covid19_data.csv")
 df["DATE"] = pd.to_datetime(df["DATE"])
 df = df[df["TX_DESCR_FR"] == "Anderlecht"]  # Filtrer pour Anderlecht
 
@@ -14,7 +14,7 @@ data = df["CASES_PER_10K_MA"].values.reshape(-1, 1)
 # Configuration du HMM
 # Utilisation d'un modèle Gaussian HMM avec 7 états cachés
 model = hmm.GaussianHMM(
-    n_components=6, covariance_type="diag", n_iter=10000, random_state=42
+    n_components=7, covariance_type="diag", n_iter=10000, random_state=42
 )
 
 # Entraînement du modèle

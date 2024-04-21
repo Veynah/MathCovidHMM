@@ -219,3 +219,5 @@ Voici tous les graphiques :
 <img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Woluwe-Saint-Lambert.png" width="25%">
 <img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Woluwe-Saint-Pierre.png" width="25%">
 
+Il faut ensuite transformer ces données en quelque  chose d'utilisable. Grâce à `df_filtered.py` nous pouvons avoir un fichier csv avec des données sur
+lesquelles nous pouvons entrainer nos hmm.
