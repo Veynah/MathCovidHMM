@@ -5,7 +5,7 @@
 Nos consignes:<br>
 <h4>sur base du modèle d'optimisation des chaines de markov à variables cachées, <br>
 utilisez l'algorithme EM pour génerer des matrices de transition pour un graphe à<br>
-19 sommets (communes de bxl),  en utilisant les données du fichier Json.
+19 sommets (communes de bxl), en utilisant les données du fichier Json.
 </h4>
 </h3>
 
@@ -244,6 +244,7 @@ Nous avons des modèles entraînés sur 70% des données et prédisant les 30% r
 Matrice de transition entre les états :
 
 
+<img src="./Projet/CodeVERSION2/30/Matrices/Anderlecht.png" width="40%"> <br>
 [[9.35235392e-001 0.00000000e+000 6.17084787e-172 4.27034347e-295 3.23912640e-002 0.00000000e+000 3.23733442e-002] <br>
 [0.00000000e+000 3.10940054e-001 0.00000000e+000 0.00000000e+000 3.44530003e-001 3.44529944e-001 0.00000000e+000] <br>
 [2.87464725e-199 0.00000000e+000 9.05818880e-001 3.14952874e-002 0.00000000e+000 0.00000000e+000 6.26858329e-002] <br>
@@ -269,6 +270,7 @@ Moyennes des états : <br>
 
 
 Matrice de transition entre les états : <br>
+<img src="./Projet/CodeVERSION2/30/Matrices/Bruxelles.png" width="40%"> <br>
 [[1.25672574e-003 9.98743266e-001 0.00000000e+000 0.00000000e+000 8.27251294e-009 1.67992905e-024 0.00000000e+000] <br>
 [1.89866716e-011 2.19760506e-008 0.00000000e+000 0.00000000e+000 9.35315617e-001 6.46843606e-002 0.00000000e+000] <br>
 [0.00000000e+000 0.00000000e+000 9.56175184e-001 2.19072245e-002 0.00000000e+000 6.49265834e-198 2.19175918e-002] <br>
@@ -294,6 +296,7 @@ Moyennes des états : <br>
 
 
 Matrice de transition entre les états : <br>
+<img src="./Projet/CodeVERSION2/30/Matrices/Etterbeek.png" width="40%"> <br>
 [[9.56560119e-001 0.00000000e+000 0.00000000e+000 1.82623433e-169 0.00000000e+000 4.34398811e-002 4.08906078e-102] <br>
 [0.00000000e+000 0.00000000e+000 7.50637770e-146 8.89318163e-323 1.00000000e+000 0.00000000e+000 0.00000000e+000] <br>
 [0.00000000e+000 6.20257935e-002 8.75811581e-001 6.21626252e-002 2.87777734e-111 1.62247417e-124 0.00000000e+000] <br>
@@ -319,6 +322,7 @@ Moyennes des états : <br>
 
 
 Matrice de transition entre les états : <br>
+<img src="./Projet/CodeVERSION2/30/Matrices/Schaerbeek.png" width="40%"> <br>
 [[9.68670073e-001 2.63399242e-227 8.56665027e-159 0.00000000e+000 6.83634581e-041 2.68227125e-249 3.13299268e-002] <br>
 [0.00000000e+000 3.41059358e-007 0.00000000e+000 0.00000000e+000 1.89545819e-002 9.81045077e-001 0.00000000e+000] <br>
 [1.68685201e-174 0.00000000e+000 8.82952150e-001 5.84641480e-002 0.00000000e+000 0.00000000e+000 5.85837017e-002] <br>
@@ -335,3 +339,74 @@ Moyennes des états : <br>
 [ 1.30987269] <br>
 [ 0.31615846] <br>
 [ 4.62860202]] <br>
+
+<br>
+
+Nous avons donc entrainé les modèles sur 70% des données et prédis les 30% restant. 
+En utilisant un HMM Gaussien avec une covariance `full` et 420 `random state`
+
+### Explications sur les covariances et random states ###
+
+Lors de l'entraînement d'un HMM, le choix du type de covariance pour les distributions de probabilité associées à chaque
+état caché est crucial car il définit la manière dont les variables sont corrélées entre elles.
+
+### Les types de `Covariance`
+
+`spherical` : Chaque composante de l'état a sa propre variance unique mais il est assumé qu'il n'y a pas de corrélation entre les composantes. <br>
+Toutes les directions de l'espace des caractéristiques ont la même variance. Cela équivaut à une matrice de covariance où la diagonale est remplie <br>
+avec une même valeur et les autres éléments sont 0.<br>
+
+`diag` : Chaque composante de l'état a sa propre variance, mais aucune corrélation entre les composantes n'est modélisée. La matrice de covariance est diagonale, <br> 
+ce qui signifie que chaque variable a sa propre variance, mais contrairement à "spherical", les variances peuvent différer. <br>
+
+`full` : La matrice de covariance complète est utilisée, permettant de modéliser les variances de chaque composante ainsi que les <br>
+covariances entre chaque paire de composantes. Cela permet une modélisation plus flexible mais augmente considérablement le nombre de paramètres à estimer. <br>
+
+`tied` : Tous les composants partagent la même matrice de covariance globale. Cela signifie qu'une seule matrice de covariance est utilisée pour toutes les <br>
+distributions des états, ce qui réduit le nombre de paramètres par rapport à "full", tout en permettant une certaine corrélation entre les variables. <br>
+
+### Signification de `Random State`
+Le `random_state` est un paramètre qui contrôle la génération aléatoire de nombres pour l'initialisation des algorithmes qui ont une composante stochastique.
+Voici quelques points clés :
+
+- **Reproductibilité** : Fournir un entier à `random_state` permet de s'assurer que les résultats sont reproductibles. Cela signifie que chaque fois que vous exécutez votre code avec le même `random_state`, vous obtiendrez exactement les mêmes résultats.
+- **Initialisation** : Dans les HMM, `random_state` peut affecter l'initialisation des paramètres du modèle, comme les probabilités de transition ou les paramètres des distributions de probabilité pour les états cachés.
+- **Utilisation pratique** : Fixer le `random_state` est utile pour le débogage et pour assurer que les variations dans les résultats du modèle sont dues à des changements dans les données ou les paramètres du modèle, et non à des différences dans l'initialisation aléatoire.
+
+
+### Comment interpréter ces résultats 
+
+### Matrice de Transition Entre les États
+
+**Etterbeek** <br>
+<img src="./Projet/CodeVERSION2/30/Matrices/Etterbeek.png" width="40%"> <br>
+
+La matrice de transition fournit les probabilités de passer d'un état à un autre. Chaque ligne de la matrice représente un état source, et chaque colonne un état cible. Les éléments de la matrice donnent la probabilité de transition d'un état à l'autre. Voici comment comprendre votre matrice :
+
+- **Diagonale Principale (par exemple, `9.56560119e-001` pour l'état 1)**: Ces valeurs élevées sur la diagonale principale indiquent que chaque état a une forte probabilité de persister au jour suivant. Par exemple, l'état 1 a environ 95.66% de chances de rester dans cet état le jour suivant.
+
+- **Valeurs Hors Diagonale**: Ces valeurs indiquent la probabilité de transitionner d'un état à un autre. Par exemple, l'état 1 a une probabilité de `4.34398811e-002` (environ 4.34%) de passer à l'état 6.
+
+- **Zéros et Valeurs très faibles (comme `1.82623433e-169`)**: Ces valeurs indiquent une probabilité presque nulle de transition entre certains états, montrant qu'il est très peu probable, voire impossible, de passer directement de ces états à d'autres spécifiques.
+
+### Moyennes des États
+
+**Etterbeek** <br>
+[[ 1.18639812] <br>
+[10.40999815] <br>
+[ 7.37356165] <br>
+[ 3.73028944] <br>
+[12.56237903] <br>
+[ 2.01370916] <br>
+[ 0.31965054]] <br>
+
+Les moyennes des états indiquent la valeur moyenne observée lorsque le système est dans un état particulier. Ces moyennes peuvent vous aider à comprendre le "comportement" ou les caractéristiques de chaque état :
+
+- **État 1 (`1.18639812`)** : Cet état pourrait représenter des jours avec un faible nombre de cas (si vous analysez des données sur les infections, par exemple).
+- **État 2 (`10.40999815`), État 5 (`12.56237903`)** : Ces états avec des moyennes élevées peuvent indiquer des jours avec un nombre élevé de cas.
+- **État 7 (`0.31965054`)** : Cet état avec la moyenne la plus basse pourrait indiquer des jours avec très peu ou aucun cas.
+
+### Interprétation Générale
+
+- **Stabilité vs Changement**: Une matrice avec de fortes probabilités sur la diagonale et des valeurs basses hors diagonale suggère un modèle où les états sont assez stables jour après jour, avec occasionnellement des transitions significatives.
+- **Dynamique des Transitions**: Les transitions qui sont possibles mais peu probables (valeurs basses mais non nulles) indiquent que certains changements d'état, bien que rares, sont possibles.
