@@ -14,7 +14,7 @@ data = df["CASES_PER_10K_MA"].values.reshape(-1, 1)
 # Configuration du HMM
 # Utilisation d'un modèle Gaussian HMM avec 7 états cachés
 model = hmm.GaussianHMM(
-    n_components=6, covariance_type="diag", n_iter=10000, random_state=42
+    n_components=7, covariance_type="diag", n_iter=10000, random_state=420
 )
 
 # Entraînement du modèle
@@ -31,7 +31,7 @@ hidden_states = model.predict(data)
 
 # Afficher les états cachés pour quelques observations
 print("\nÉtats cachés prédits pour les données :")
-print(hidden_states[:1000])  # Afficher les premiers 100 états prédits
+print(hidden_states[:400])  # Afficher les premiers 100 états prédits
 
 """
 Bien sûr, je vais vous expliquer les différents éléments du code utilisé pour configurer et entraîner le modèle de Markov caché (HMM) avec `hmmlearn`, en mettant l'accent sur les choix spécifiques tels que le `random_state` et le type de matrice de covariance.

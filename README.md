@@ -152,8 +152,8 @@ L'algorithme de Hampel, souvent utilisé dans le cadre du filtrage Hampel pour l
 
 En résumé, l'algorithme de Hampel est une méthode puissante et flexible pour nettoyer les ensembles de données, en assurant que les résultats des analyses soient fiables et non biaisés par des données anormales. Cela le rend extrêmement utile dans une multitude de contextes où la précision des données est cruciale.
 
-Nous avons fait des tests en changeant de fenêtre, de 7 jours à 28 et au début nous étions partis sur les données prodiguées par la 
-fenêtre de 7 jours, mais celle-ci laissait trop de bruits. <br>
+Nous avons fait des tests en changeant de fenêtre, de 7 jours à 28  <br>
+Nous sommes partis sur une fenêtre pour Hampel de 7 jours
 `hampel2.py` permet de comparer les différentes fenêtres, les graphiques sont disponibles ici: <br>
 <a href="https://github.com/Veynah/MathCovidHMM/tree/main/Projet/CodeVERSION1/GraphHampel2TestWindowSigma3" target="_blank">Graphiques de comparaison de fenêtres</a>
 
@@ -221,3 +221,8 @@ Voici tous les graphiques :
 
 Il faut ensuite transformer ces données en quelque  chose d'utilisable. Grâce à `df_filtered.py` nous pouvons avoir un fichier csv avec des données sur
 lesquelles nous pouvons entrainer nos hmm.
+
+Donc avec une fenêtre coulissante de 7 pour Hampel et une moyenne mobile de 21 jours, nous pouvons obtenir de nouvelles données intitulées `CASES_PER_10K_MA`.
+Nous avons fait en sorte de n'avoir que 2 chiffres après la virgule pour encore nous débarrasser du bruit et éviter les variations inutiles.
+
+<h4>Fin des traitements de données.</h4> 

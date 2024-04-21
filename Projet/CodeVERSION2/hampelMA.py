@@ -35,7 +35,7 @@ df["CASES_PER_10K"] = pd.to_numeric(df["CASES_PER_10K"])
 df["DATE"] = pd.to_datetime(df["DATE"])
 df = df[["DATE", "TX_DESCR_FR", "CASES_PER_10K"]]
 
-window_size_hampel = 21  # Configuration pour Hampel
+window_size_hampel = 7  # Configuration pour Hampel
 n_sigmas = 3
 window_size_ma = 21  # Configuration pour moyenne mobile
 

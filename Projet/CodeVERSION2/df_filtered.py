@@ -34,7 +34,7 @@ def moving_average_filter(s, window_size=21):
 for commune in df["TX_DESCR_FR"].unique():
     mask = df["TX_DESCR_FR"] == commune
     df.loc[mask, "CASES_PER_10K"] = hampel_filter_for_series(
-        df.loc[mask, "CASES_PER_10K"], window_size=21, n_sigmas=3
+        df.loc[mask, "CASES_PER_10K"], window_size=7, n_sigmas=3
     )
     df.loc[mask, "CASES_PER_10K_MA"] = moving_average_filter(
         df.loc[mask, "CASES_PER_10K"]
