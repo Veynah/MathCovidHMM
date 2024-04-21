@@ -175,4 +175,47 @@ La moyenne mobile est une technique statistique utilisée pour analyser des sér
 
 3. **Amélioration de la précision des prévisions** : Dans les applications où les prévisions précises sont critiques, comme la finance ou la météorologie, l'ajout de l'étape de filtration Hampel avant le calcul des moyennes mobiles peut améliorer significativement la qualité des prédictions en éliminant les anomalies avant qu'elles n'affectent la moyenne.
 
-Prochaine étape montrer Hampel et MA avec une fenêtre de 21 jours, montrer les graphiques, montrer le script qui transoforme ces données en csv utilisable puis entrainer les modèles.
+<br>
+
+## Hampel et MA ##
+
+En utilisant `hampelMA.py` nous pouvons voir maintenant comment les données sont plus claires, lisses et utilisables maintenant. Notre choix de prendre une fênetre
+de 21 jours vient d'un test précédent où nous avions utilisé une fenêtre de 7 jours et entrainé nos hmm dessus.
+Nous pouvons comparer les résultats d'une fenêtre de 7 jours à ceux de 21 jours. Quelques exemples: <br>
+
+<h4>7 jours <br>
+<img src="./Projet/CodeVERSION1/GraphHampelMA/COVID19_MA_Bruxelles.png" width="40%">
+<img src="./Projet/CodeVERSION1/GraphHampelMA/COVID19_MA_Schaerbeek.png" width="40%">
+<br>
+<h4>21 jours</h4>
+<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Bruxelles.png" width="40%">
+<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Schaerbeek.png" width="40%">
+
+<br>
+
+Voici tous les graphiques : <br>
+
+<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_Anderlecht.png" width="25%">
+<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Auderghem.png" width="25%">
+<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Berchem-Sainte-Agathe.png" width="25%">
+<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Bruxelles.png" width="25%">
+<br>
+<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Etterbeek.png" width="25%">
+<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Evere.png" width="25%">
+<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Forest_(Bruxelles-Capitale).png" width="25%">
+<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Ganshoren.png" width="25%">
+<br>
+<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Ixelles.png" width="25%">
+<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Jette.png" width="25%">
+<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Koekelberg.png" width="25%">
+<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Molenbeek-Saint-Jean.png" width="25%">
+<br>
+<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Saint-Gilles.png" width="25%">
+<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Saint-Josse-ten-Noode.png" width="25%">
+<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Schaerbeek.png" width="25%">
+<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Uccle.png" width="25%">
+<br>
+<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Watermael-Boitsfort.png" width="25%">
+<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Woluwe-Saint-Lambert.png" width="25%">
+<img src="./Projet/CodeVERSION2/GraphStandard10KParCommune/COVID19_Woluwe-Saint-Pierre.png" width="25%">
+
