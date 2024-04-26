@@ -195,29 +195,29 @@ Nous pouvons comparer les résultats d'une fenêtre de 7 jours à ceux de 21 jou
 
 Voici tous les graphiques :
 
-<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Anderlecht.png" width="25%">
-<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Auderghem.png" width="25%">
-<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Berchem-Sainte-Agathe.png" width="25%">
-<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Bruxelles.png" width="25%">
+<img src="Projet/Code/HampelMA21J/COVID19_MA_Anderlecht.png" width="25%">
+<img src="Projet/Code/HampelMA21J/COVID19_MA_Auderghem.png" width="25%">
+<img src="Projet/Code/HampelMA21J/COVID19_MA_Berchem-Sainte-Agathe.png" width="25%">
+<img src="Projet/Code/HampelMA21J/COVID19_MA_Bruxelles.png" width="25%">
 <br>
-<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Etterbeek.png" width="25%">
-<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Evere.png" width="25%">
-<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Forest_(Bruxelles-Capitale).png" width="25%">
-<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Ganshoren.png" width="25%">
+<img src="Projet/Code/HampelMA21J/COVID19_MA_Etterbeek.png" width="25%">
+<img src="Projet/Code/HampelMA21J/COVID19_MA_Evere.png" width="25%">
+<img src="Projet/Code/HampelMA21J/COVID19_MA_Forest_(Bruxelles-Capitale).png" width="25%">
+<img src="Projet/Code/HampelMA21J/COVID19_MA_Ganshoren.png" width="25%">
 <br>
-<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Ixelles.png" width="25%">
-<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Jette.png" width="25%">
-<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Koekelberg.png" width="25%">
-<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Molenbeek-Saint-Jean.png" width="25%">
+<img src="Projet/Code/HampelMA21J/COVID19_MA_Ixelles.png" width="25%">
+<img src="Projet/Code/HampelMA21J/COVID19_MA_Jette.png" width="25%">
+<img src="Projet/Code/HampelMA21J/COVID19_MA_Koekelberg.png" width="25%">
+<img src="Projet/Code/HampelMA21J/COVID19_MA_Molenbeek-Saint-Jean.png" width="25%">
 <br>
-<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Saint-Gilles.png" width="25%">
-<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Saint-Josse-ten-Noode.png" width="25%">
-<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Schaerbeek.png" width="25%">
-<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Uccle.png" width="25%">
+<img src="Projet/Code/HampelMA21J/COVID19_MA_Saint-Gilles.png" width="25%">
+<img src="Projet/Code/HampelMA21J/COVID19_MA_Saint-Josse-ten-Noode.png" width="25%">
+<img src="Projet/Code/HampelMA21J/COVID19_MA_Schaerbeek.png" width="25%">
+<img src="Projet/Code/HampelMA21J/COVID19_MA_Uccle.png" width="25%">
 <br>
-<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Watermael-Boitsfort.png" width="25%">
-<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Woluwe-Saint-Lambert.png" width="25%">
-<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Woluwe-Saint-Pierre.png" width="25%">
+<img src="Projet/Code/HampelMA21J/COVID19_MA_Watermael-Boitsfort.png" width="25%">
+<img src="Projet/Code/HampelMA21J/COVID19_MA_Woluwe-Saint-Lambert.png" width="25%">
+<img src="Projet/Code/HampelMA21J/COVID19_MA_Woluwe-Saint-Pierre.png" width="25%">
 
 Il faut ensuite transformer ces données en quelque  chose d'utilisable. Grâce à `df_filtered.py` nous pouvons avoir un fichier csv avec des données sur
 lesquelles nous pouvons entrainer nos hmm.
@@ -244,7 +244,7 @@ Nous avons des modèles entraînés sur 70% des données et prédisant les 30% r
 Matrice de transition entre les états :
 
 
-<img src="./Projet/CodeVERSION2/30/Matrices/Anderlecht.png" width="40%"> <br>
+<img src="Projet/Code/30/Matrices/Anderlecht.png" width="40%"> <br>
 [[9.35235392e-001 0.00000000e+000 6.17084787e-172 4.27034347e-295 3.23912640e-002 0.00000000e+000 3.23733442e-002] <br>
 [0.00000000e+000 3.10940054e-001 0.00000000e+000 0.00000000e+000 3.44530003e-001 3.44529944e-001 0.00000000e+000] <br>
 [2.87464725e-199 0.00000000e+000 9.05818880e-001 3.14952874e-002 0.00000000e+000 0.00000000e+000 6.26858329e-002] <br>
