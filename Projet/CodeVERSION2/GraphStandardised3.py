@@ -4,33 +4,34 @@ import numpy as np
 import json
 import matplotlib.ticker as ticker
 
-# Chemin vers votre fichier JSON standardisé
+# Chemin vers le fichier JSON contenant les données standardisées de COVID-19
 filename = "Standardized_Covid19_data10K.json"
 
 # Charger les données depuis le fichier JSON
 with open(filename, "r") as file:
     data = json.load(file)
 
-# Convertir les données en DataFrame pandas
+# Conversion des données JSON en DataFrame pandas pour une manipulation plus facile
 df = pd.DataFrame(data)
 
-# Assurer que 'CASES_PER_10K' est en nombres décimaux et les dates en type date
+# Conversion de 'CASES_PER_10K' en nombres décimaux et de 'DATE' en type date
 df["CASES_PER_10K"] = pd.to_numeric(df["CASES_PER_10K"])
 df["DATE"] = pd.to_datetime(df["DATE"])
 
-# Sélectionner un sous-ensemble de colonnes pertinentes, en incluant 'CASES_PER_10K'
+# Sélection des colonnes pertinentes pour l'analyse
 df = df[["DATE", "TX_DESCR_FR", "CASES_PER_10K"]]
 
-# Obtenir la liste unique des communes
+# Extraction de la liste des communes pour lesquelles des graphiques seront générés
 communes = df["TX_DESCR_FR"].unique()
 
-# Générer et sauvegarder un graphique pour chaque commune
+# Génération et enregistrement d'un graphique pour chaque commune
 for commune in communes:
     plt.figure(figsize=(10, 6))
     commune_data = df[df["TX_DESCR_FR"] == commune]
     total_cases_per_10k_per_day = (
         commune_data.groupby("DATE")["CASES_PER_10K"].sum().reset_index()
     )
+    # Création d'un graphique linéaire avec points pour chaque jour
     plt.plot(
         total_cases_per_10k_per_day["DATE"],
         total_cases_per_10k_per_day["CASES_PER_10K"],
@@ -44,26 +45,21 @@ for commune in communes:
         s=10,  # Points ajoutés pour chaque jour
     )
 
+    # Configuration des titres et des axes
     plt.title(f"Évolution des cas de COVID-19 pour 10k habitants - {commune}")
     plt.xlabel("Date")
     plt.ylabel("Cas de COVID-19 par 10 000 habitants")
     plt.xticks(rotation=45)
     plt.legend()
 
-    # Ajuster la précision de l'axe des ordonnées
-    ax = plt.gca()  # Get current axes
-    ax.yaxis.set_major_locator(
-        ticker.AutoLocator()
-    )  # Ajuste automatiquement les graduations
-    ax.yaxis.set_minor_locator(
-        ticker.AutoMinorLocator()
-    )  # Ajoute des graduations mineures pour plus de précision
-    ax.yaxis.set_major_formatter(
-        ticker.FuncFormatter(lambda x, _: f"{x:.2f}")
-    )  # Format avec 2 décimales
+    # Ajustement de l'axe des ordonnées pour une meilleure précision
+    ax = plt.gca()
+    ax.yaxis.set_major_locator(ticker.AutoLocator())
+    ax.yaxis.set_minor_locator(ticker.AutoMinorLocator())
+    ax.yaxis.set_major_formatter(ticker.FuncFormatter(lambda x, _: f"{x:.2f}"))
 
     plt.tight_layout()
 
-    # Sauvegarder le graphique avec un nom de fichier basé sur le nom de la commune
+    # Sauvegarde du graphique dans un fichier image
     plt.savefig(f"COVID19_{commune.replace(' ', '_').replace('/', '_')}.png")
     plt.close()  # Fermer la figure courante pour libérer la mémoire

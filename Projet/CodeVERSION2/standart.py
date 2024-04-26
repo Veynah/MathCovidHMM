@@ -4,7 +4,7 @@ import json
 input_file = "Updated_Covid19_data.json"
 output_file = "Standardized_Covid19_data10K.json"
 
-# Population par commune
+# Données de population pour chaque commune
 population_data = {
     "Anderlecht": 121723,
     "Auderghem": 34543,
@@ -27,26 +27,28 @@ population_data = {
     "Woluwe-Saint-Pierre": 42038,
 }
 
-# Lire les données JSON d'entrée
+# Chargement des données JSON depuis le fichier d'entrée
 with open(input_file, "r", encoding="utf-8") as file:
     data = json.load(file)
 
-# Liste pour stocker les données standardisées
+# Préparation de la liste pour les données standardisées
 standardized_data = []
 
-# Calculer le taux de cas pour 100000 habitants pour chaque enregistrement
+# Calcul du nombre de cas pour 10 000 habitants pour chaque enregistrement
 for record in data:
     commune_name = record["TX_DESCR_FR"]
     if commune_name in population_data:
         population = population_data[commune_name]
+        # Calcul des cas par 10k habitants
         cases_per_10k = (int(record["CASES"]) / population) * 10000
-        # Ajouter le résultat dans un nouveau dictionnaire
+        # Création d'un nouveau dictionnaire pour les données standardisées
         standardized_record = record.copy()
         standardized_record["CASES_PER_10K"] = cases_per_10k
         standardized_data.append(standardized_record)
 
-# Écrire les données standardisées dans un nouveau fichier JSON
+# Sauvegarde des données standardisées dans le fichier de sortie
 with open(output_file, "w", encoding="utf-8") as file:
     json.dump(standardized_data, file, ensure_ascii=False, indent=4)
 
+# Message de confirmation
 print(f"Les données ont été standardisées et enregistrées dans '{output_file}'.")
