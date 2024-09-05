@@ -104,29 +104,29 @@ Grâce au script `standart.py`, nous obtenons donc un fichier Json presque utili
 Nous avions aussi fait le test en prenant le nombre de cas par 100 000 mais nous obtenions des nombres 
 de cas par jour trop farfelus. <br>
 Nous obtenons donc des graphiques avec `GraphStandardised3.py` comme ceci : <br>
-<img src="./Projet/CodeVERSION1/GraphStandard10KParCommune/COVID19_Anderlecht.png" width="25%">
-<img src="./Projet/CodeVERSION1/GraphStandard10KParCommune/COVID19_Auderghem.png" width="25%">
-<img src="./Projet/CodeVERSION1/GraphStandard10KParCommune/COVID19_Berchem-Sainte-Agathe.png" width="25%">
-<img src="./Projet/CodeVERSION1/GraphStandard10KParCommune/COVID19_Bruxelles.png" width="25%">
+<img src="./Projet/Archive/GraphStandard10KParCommune/COVID19_Anderlecht.png" width="25%">
+<img src="./Projet/Archive/GraphStandard10KParCommune/COVID19_Auderghem.png" width="25%">
+<img src="./Projet/Archive/GraphStandard10KParCommune/COVID19_Berchem-Sainte-Agathe.png" width="25%">
+<img src="./Projet/Archive/GraphStandard10KParCommune/COVID19_Bruxelles.png" width="25%">
 <br>
-<img src="./Projet/CodeVERSION1/GraphStandard10KParCommune/COVID19_Etterbeek.png" width="25%">
-<img src="./Projet/CodeVERSION1/GraphStandard10KParCommune/COVID19_Evere.png" width="25%">
-<img src="./Projet/CodeVERSION1/GraphStandard10KParCommune/COVID19_Forest_(Bruxelles-Capitale).png" width="25%">
-<img src="./Projet/CodeVERSION1/GraphStandard10KParCommune/COVID19_Ganshoren.png" width="25%">
+<img src="./Projet/Archive/GraphStandard10KParCommune/COVID19_Etterbeek.png" width="25%">
+<img src="./Projet/Archive/GraphStandard10KParCommune/COVID19_Evere.png" width="25%">
+<img src="./Projet/Archive/GraphStandard10KParCommune/COVID19_Forest_(Bruxelles-Capitale).png" width="25%">
+<img src="./Projet/Archive/GraphStandard10KParCommune/COVID19_Ganshoren.png" width="25%">
 <br>
-<img src="./Projet/CodeVERSION1/GraphStandard10KParCommune/COVID19_Ixelles.png" width="25%">
-<img src="./Projet/CodeVERSION1/GraphStandard10KParCommune/COVID19_Jette.png" width="25%">
-<img src="./Projet/CodeVERSION1/GraphStandard10KParCommune/COVID19_Koekelberg.png" width="25%">
-<img src="./Projet/CodeVERSION1/GraphStandard10KParCommune/COVID19_Molenbeek-Saint-Jean.png" width="25%">
+<img src="./Projet/Archive/GraphStandard10KParCommune/COVID19_Ixelles.png" width="25%">
+<img src="./Projet/Archive/GraphStandard10KParCommune/COVID19_Jette.png" width="25%">
+<img src="./Projet/Archive/GraphStandard10KParCommune/COVID19_Koekelberg.png" width="25%">
+<img src="./Projet/Archive/GraphStandard10KParCommune/COVID19_Molenbeek-Saint-Jean.png" width="25%">
 <br>
-<img src="./Projet/CodeVERSION1/GraphStandard10KParCommune/COVID19_Saint-Gilles.png" width="25%">
-<img src="./Projet/CodeVERSION1/GraphStandard10KParCommune/COVID19_Saint-Josse-ten-Noode.png" width="25%">
-<img src="./Projet/CodeVERSION1/GraphStandard10KParCommune/COVID19_Schaerbeek.png" width="25%">
-<img src="./Projet/CodeVERSION1/GraphStandard10KParCommune/COVID19_Uccle.png" width="25%">
+<img src="./Projet/Archive/GraphStandard10KParCommune/COVID19_Saint-Gilles.png" width="25%">
+<img src="./Projet/Archive/GraphStandard10KParCommune/COVID19_Saint-Josse-ten-Noode.png" width="25%">
+<img src="./Projet/Archive/GraphStandard10KParCommune/COVID19_Schaerbeek.png" width="25%">
+<img src="./Projet/Archive/GraphStandard10KParCommune/COVID19_Uccle.png" width="25%">
 <br>
-<img src="./Projet/CodeVERSION1/GraphStandard10KParCommune/COVID19_Watermael-Boitsfort.png" width="25%">
-<img src="./Projet/CodeVERSION1/GraphStandard10KParCommune/COVID19_Woluwe-Saint-Lambert.png" width="25%">
-<img src="./Projet/CodeVERSION1/GraphStandard10KParCommune/COVID19_Woluwe-Saint-Pierre.png" width="25%">
+<img src="./Projet/Archive/GraphStandard10KParCommune/COVID19_Watermael-Boitsfort.png" width="25%">
+<img src="./Projet/Archive/GraphStandard10KParCommune/COVID19_Woluwe-Saint-Lambert.png" width="25%">
+<img src="./Projet/Archive/GraphStandard10KParCommune/COVID19_Woluwe-Saint-Pierre.png" width="25%">
 
 <br>
 
@@ -155,7 +155,7 @@ En résumé, l'algorithme de Hampel est une méthode puissante et flexible pour 
 Nous avons fait des tests en changeant de fenêtre, de 7 jours à 28  <br>
 Nous sommes partis sur une fenêtre pour Hampel de 7 jours
 `hampel2.py` permet de comparer les différentes fenêtres, les graphiques sont disponibles ici: <br>
-<a href="https://github.com/Veynah/MathCovidHMM/tree/main/Projet/CodeVERSION1/GraphHampel2TestWindowSigma3" target="_blank">Graphiques de comparaison de fenêtres</a>
+<a href="https://github.com/Veynah/MathCovidHMM/tree/main/Projet/Archive/GraphHampel2TestWindowSigma3" target="_blank">Graphiques de comparaison de fenêtres</a>
 
 <br>
 
@@ -184,12 +184,12 @@ de 21 jours vient d'un test précédent où nous avions utilisé une fenêtre de
 Nous pouvons comparer les résultats d'une fenêtre de 7 jours à ceux de 21 jours. Quelques exemples: <br>
 
 <h4>7 jours <br>
-<img src="./Projet/CodeVERSION1/GraphHampelMA/COVID19_MA_Bruxelles.png" width="40%">
-<img src="./Projet/CodeVERSION1/GraphHampelMA/COVID19_MA_Schaerbeek.png" width="40%">
+<img src="./Projet/Archive/GraphHampelMA/COVID19_MA_Bruxelles.png" width="40%">
+<img src="./Projet/Archive/GraphHampelMA/COVID19_MA_Schaerbeek.png" width="40%">
 <br>
 <h4>21 jours</h4>
-<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Bruxelles.png" width="40%">
-<img src="./Projet/CodeVERSION2/HampelMA21J/COVID19_MA_Schaerbeek.png" width="40%">
+<img src="./Projet/Code/HampelMA21J/COVID19_MA_Bruxelles.png" width="40%">
+<img src="./Projet/Code/HampelMA21J/COVID19_MA_Schaerbeek.png" width="40%">
 
 <br>
 
@@ -237,8 +237,8 @@ Nous utilisons les données stockées dans notre fichier csv (CASES_PER_10K_MA) 
 Nous avons des modèles entraînés sur 70% des données et prédisant les 30% restant. Ceux-ci sont les HMMTEST, en voici quelqu'uns : <br>
 
 <h4>Anderlercht</h4>
-<img src="./Projet/CodeVERSION2/30/Anderlecht.png" width="40%">
-<img src="./Projet/CodeVERSION2/30/COVID19_Anderlecht.png" width="40%">
+<img src="./Projet/Code/30/Anderlecht.png" width="40%">
+<img src="./Projet/Code/30/COVID19_Anderlecht.png" width="40%">
 
 
 Matrice de transition entre les états :
@@ -265,12 +265,12 @@ Moyennes des états : <br>
 
 
 <h4>Bruxelles</h4>
-<img src="./Projet/CodeVERSION2/30/Bruxelles.png" width="40%">
-<img src="./Projet/CodeVERSION2/30/COVID19_Bruxelles.png" width="40%">
+<img src="./Projet/Code/30/Bruxelles.png" width="40%">
+<img src="./Projet/Code/30/COVID19_Bruxelles.png" width="40%">
 
 
 Matrice de transition entre les états : <br>
-<img src="./Projet/CodeVERSION2/30/Matrices/Bruxelles.png" width="40%"> <br>
+<img src="./Projet/Code/30/Matrices/Bruxelles.png" width="40%"> <br>
 [[1.25672574e-003 9.98743266e-001 0.00000000e+000 0.00000000e+000 8.27251294e-009 1.67992905e-024 0.00000000e+000] <br>
 [1.89866716e-011 2.19760506e-008 0.00000000e+000 0.00000000e+000 9.35315617e-001 6.46843606e-002 0.00000000e+000] <br>
 [0.00000000e+000 0.00000000e+000 9.56175184e-001 2.19072245e-002 0.00000000e+000 6.49265834e-198 2.19175918e-002] <br>
@@ -291,12 +291,12 @@ Moyennes des états : <br>
 
 
 <h4>Etterbeek</h4>
-<img src="./Projet/CodeVERSION2/30/Etterbeek.png" width="40%">
-<img src="./Projet/CodeVERSION2/30/COVID19_Etterbeek.png" width="40%">
+<img src="./Projet/Code/30/Etterbeek.png" width="40%">
+<img src="./Projet/Code/30/COVID19_Etterbeek.png" width="40%">
 
 
 Matrice de transition entre les états : <br>
-<img src="./Projet/CodeVERSION2/30/Matrices/Etterbeek.png" width="40%"> <br>
+<img src="./Projet/Code/30/Matrices/Etterbeek.png" width="40%"> <br>
 [[9.56560119e-001 0.00000000e+000 0.00000000e+000 1.82623433e-169 0.00000000e+000 4.34398811e-002 4.08906078e-102] <br>
 [0.00000000e+000 0.00000000e+000 7.50637770e-146 8.89318163e-323 1.00000000e+000 0.00000000e+000 0.00000000e+000] <br>
 [0.00000000e+000 6.20257935e-002 8.75811581e-001 6.21626252e-002 2.87777734e-111 1.62247417e-124 0.00000000e+000] <br>
@@ -317,12 +317,12 @@ Moyennes des états : <br>
 
 
 <h4>Schaerbeek</h4>
-<img src="./Projet/CodeVERSION2/30/Schaerbeek.png" width="40%">
-<img src="./Projet/CodeVERSION2/30/COVID19_Schaerbeek.png" width="40%">
+<img src="./Projet/Code/30/Schaerbeek.png" width="40%">
+<img src="./Projet/Code/30/COVID19_Schaerbeek.png" width="40%">
 
 
 Matrice de transition entre les états : <br>
-<img src="./Projet/CodeVERSION2/30/Matrices/Schaerbeek.png" width="40%"> <br>
+<img src="./Projet/Code/30/Matrices/Schaerbeek.png" width="40%"> <br>
 [[9.68670073e-001 2.63399242e-227 8.56665027e-159 0.00000000e+000 6.83634581e-041 2.68227125e-249 3.13299268e-002] <br>
 [0.00000000e+000 3.41059358e-007 0.00000000e+000 0.00000000e+000 1.89545819e-002 9.81045077e-001 0.00000000e+000] <br>
 [1.68685201e-174 0.00000000e+000 8.82952150e-001 5.84641480e-002 0.00000000e+000 0.00000000e+000 5.85837017e-002] <br>
@@ -379,7 +379,7 @@ Voici quelques points clés :
 ### Matrice de Transition Entre les États
 
 **Etterbeek** <br>
-<img src="./Projet/CodeVERSION2/30/Matrices/Etterbeek.png" width="40%"> <br>
+<img src="./Projet/Code/30/Matrices/Etterbeek.png" width="40%"> <br>
 
 La matrice de transition fournit les probabilités de passer d'un état à un autre. Chaque ligne de la matrice représente un état source, et chaque colonne un état cible. Les éléments de la matrice donnent la probabilité de transition d'un état à l'autre. Voici comment comprendre votre matrice :
 
